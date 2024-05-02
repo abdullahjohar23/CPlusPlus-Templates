@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std ;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    string car = "audi";
+    car.erase(0,1); // removes first character
+    cout << car;
+
+    return 0 ;
+}

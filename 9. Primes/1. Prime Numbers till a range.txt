@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long range;
+    cout << "Enter the range: ";
+    cin >> range;
+
+    long long arr[range] = {0};
+
+    for(int i = 2; i <= range; i++){
+        for(int j = i * i; j <= range; j+=i){
+            arr[j - 1] = 1;
+        }
+    }
+
+    cout << "\nPrime numbers till " << range << " are:\n" << endl;
+
+    for(int i = 2; i <= range; i++){
+        if(arr[i - 1] == 0){
+            cout << i << " ";
+        }
+    }
+
+    cout << endl;
+
+    return 0;
+}
